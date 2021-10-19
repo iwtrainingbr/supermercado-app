@@ -7,6 +7,7 @@ import Test from "./pages/Test";
 import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/configuracoes" component={Config}/>
         <Route path="/pedidos" component={Orders}/>
         <Route path="/produtos" component={Products}/>
+        <Route path="/quem-somos" component={About}/>
       </Switch>
     </BrowserRouter>
   );
