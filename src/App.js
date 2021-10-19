@@ -8,6 +8,8 @@ import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
 import About from "./pages/About";
+import Contact from "./pages/Contacts";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/pedidos" component={Orders}/>
         <Route path="/produtos" component={Products}/>
         <Route path="/quem-somos" component={About}/>
+        <Route path="/contatos" component={Contacts}/>
       </Switch>
     </BrowserRouter>
   );
