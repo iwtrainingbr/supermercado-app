@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Report from "./pages/Report";
 import Test from "./pages/Test";
 import Config from "./pages/Config";
+import Products from "./pages/Products";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/relatorios" component={Report}/>
         <Route path="/teste" component={Test}/>
         <Route path="/configuracoes" component={Config}/>
+        <Route path="/produtos" component={Products}/>
       </Switch>
     </BrowserRouter>
   );
