@@ -8,8 +8,9 @@ import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
 import About from "./pages/About";
-import Contact from "./pages/Contacts";
+
 import Category from "./pages/Category"
+import Contacts from "./pages/Contacts"
 
 
 
