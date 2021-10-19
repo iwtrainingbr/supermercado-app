@@ -9,6 +9,8 @@ import Orders from "./pages/Orders";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contacts";
+import Category from "./pages/Category"
+
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path="/produtos" component={Products}/>
         <Route path="/quem-somos" component={About}/>
         <Route path="/contatos" component={Contacts}/>
+        <Route path="/Categorias" component={Category}/>
+
       </Switch>
     </BrowserRouter>
   );
