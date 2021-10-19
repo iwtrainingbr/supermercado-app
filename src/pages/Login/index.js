@@ -1,43 +1,21 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
-function ComponentTest (props) {
-  return (
-    <>
-      Componente customizado
-      {props.children}
-    </>
-  );
-}
-
+import {Button, TextField, Divider} from "@mui/material";
+import "./styles.css";
 
 export default function Login() {
   return (
-    <div className="container">
+    <div className="page-login">
       <form>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          placeholder="Email"
-          className="form-control"
-        />
+        <h1>Login</h1>
 
-        <label for="password">Senha</label>
-        <input
-          id="password"
-          placeholder="Senha"
-          type="password"
-          className="form-control"
-          required
-        />
+        <Divider/>
 
-        <ComponentTest>
-        123
-        </ComponentTest>
+        <TextField fullWidth label="Email"/>
 
+        <TextField fullWidth label="Senha"/>
 
-        <button className="btn btn-primary">
+        <Button fullWidth color="primary" size="large" variant="contained">
           Entrar
-        </button>
+        </Button>
       </form>
     </div>
   )
