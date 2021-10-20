@@ -29,7 +29,6 @@ function App() {
         <Route path="/quem-somos" component={About}/>
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
-
       </Switch>
     </BrowserRouter>
   );
