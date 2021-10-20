@@ -7,12 +7,7 @@ import Test from "./pages/Test";
 import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
-import About from "./pages/About";
-
-import Category from "./pages/Category"
 import Contacts from "./pages/Contacts"
-
-
 
 function App() {
   return (
