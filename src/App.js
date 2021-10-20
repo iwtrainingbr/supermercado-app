@@ -8,11 +8,10 @@ import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
 import About from "./pages/About";
-import Category from "./pages/Category"
-import Contacts from "./pages/Contacts"
+import Contacts from "./pages/Contacts";
+import Category from "./pages/Category";
+import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
-
-
 
 function App() {
   return (
@@ -29,6 +28,8 @@ function App() {
         <Route path="/quem-somos" component={About}/>
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
+
+        <Route path="/*" component={NotFound}/>
       </Switch>
     </BrowserRouter>
   );
