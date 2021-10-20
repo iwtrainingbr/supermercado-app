@@ -1,5 +1,6 @@
+
 import {Button, TextField, Divider} from "@mui/material";
-import "./styles.css";
+import "./styles.scss";
 
 export default function Login() {
   return (
@@ -11,7 +12,7 @@ export default function Login() {
 
         <TextField fullWidth label="Email"/>
 
-        <TextField fullWidth label="Senha"/>
+        <TextField type="password" fullWidth label="Senha"/>
 
         <Button fullWidth color="primary" size="large" variant="contained">
           Entrar

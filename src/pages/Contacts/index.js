@@ -1,12 +1,34 @@
-export default function Contacts () {
+import {Button, TextField, Divider} from "@mui/material";
+import "./styles.scss";
+
+export default function Contatcts() {
   return (
-    <div className="container">
-      <h1>Fone: 85 99481-9678</h1>
+    <div className="page-contacts">
+      <form>
+        <h1>Formulário de Contato</h1>
 
-      <h1>Whatsapp: 859841-9788</h1>
+        <Divider/>
 
-      <h1>Instagram: @superapp</h1>
+        <TextField fullWidth label="Nome" placeholder="Fulano Detal AssimAssado"/>
 
+        <TextField fullWidth label="Email" placeholder="Ex: fulanodetal@gmail.com"/>
+
+        <TextField fullWidth label="Telefone" placeholder="Ex: (DDD) 98765-4321"/>
+
+        <TextField
+          id="standard-multiline-static"
+          fullWidth
+          label="Mensagem"
+          multiline
+          rows={4}
+          variant="outlined"
+          placeholder="Diga-nos o que deseja!"
+        />
+
+        <Button fullWidth color="primary" size="large" variant="contained">
+          Enviar
+        </Button>
+      </form>
     </div>
   )
 }

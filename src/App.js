@@ -11,11 +11,13 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
-
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar/>
+
       <Switch>
         <Route path="/login" component={Login}/>
         <Route path="/relatorios" component={Report}/>
@@ -28,7 +30,6 @@ function App() {
         <Route path="/Categorias" component={Category}/>
 
         <Route path="/*" component={NotFound}/>
-
       </Switch>
     </BrowserRouter>
   );
