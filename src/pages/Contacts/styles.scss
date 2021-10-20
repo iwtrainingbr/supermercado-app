@@ -1,0 +1,9 @@
+$margin: 20px;
+
+.page-contacts {
+  padding: $margin;
+
+  .MuiFormControl-fullWidth, .MuiButton-contained {
+    margin-top: $margin;
+  }
+}

@@ -1,5 +1,5 @@
 import {Button, TextField, Divider} from "@mui/material";
-import "./styles.css";
+import "./styles.scss";
 
 export default function Login() {
   return (
