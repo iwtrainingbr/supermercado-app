@@ -12,6 +12,7 @@ import Contacts from "./pages/Contacts";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
+import Counter from "./pages/Counter";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/quem-somos" component={About}/>
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
+        <Route path="/contador" component={Counter}/>
 
         <Route path="/*" component={NotFound}/>
       </Switch>

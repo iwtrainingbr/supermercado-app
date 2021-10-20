@@ -13,10 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
 export default function Navbar() {
-
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
