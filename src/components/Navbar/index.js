@@ -126,7 +126,7 @@ export default function Navbar() {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}>Minha Conta</MenuItem>
-                <MenuItem onClick={handleClose}>Sair</MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/login">Sair</MenuItem>
               </Menu>
             </div>
 
