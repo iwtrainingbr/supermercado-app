@@ -1,9 +1,0 @@
-$margin: 20px;
-
-.page-login {
-  padding: $margin;
-
-  .MuiFormControl-fullWidth, .MuiButton-contained {
-    margin-top: $margin;
-  }
-}

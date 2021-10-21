@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./pages/Login";
 import Report from "./pages/Report";
@@ -22,7 +21,7 @@ function App() {
       <Navbar/>
 
       <Switch>
-        <Route path="/" component={Home}/>
+        <Route path="/" exact component={Home}/>
         <Route path="/login" component={Login}/>
         <Route path="/relatorios" component={Report}/>
         <Route path="/teste" component={Test}/>
