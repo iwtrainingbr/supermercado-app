@@ -12,6 +12,7 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Counter from "./pages/Counter";
+import Carrinho from "./pages/Shop";
 import Home from "./pages/Home";
 import Register from "./pages/Register"
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
         <Route path="/contador" component={Counter}/>
+        <Route path="/carrinho" component={Carrinho}/>
         <Route path="/cadastro" component={Register}/>
 
         <Route path="/*" component={NotFound}/>
