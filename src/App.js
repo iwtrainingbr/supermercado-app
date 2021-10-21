@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./pages/Login";
 import Report from "./pages/Report";
@@ -14,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Counter from "./pages/Counter";
 import Carrinho from "./pages/Shop";
+import Home from "./pages/Home";
+import Register from "./pages/Register"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Navbar/>
 
       <Switch>
+        <Route path="/" exact component={Home}/>
         <Route path="/login" component={Login}/>
         <Route path="/relatorios" component={Report}/>
         <Route path="/teste" component={Test}/>
@@ -32,6 +34,7 @@ function App() {
         <Route path="/Categorias" component={Category}/>
         <Route path="/contador" component={Counter}/>
         <Route path="/carrinho" component={Carrinho}/>
+        <Route path="/cadastro" component={Register}/>
 
         <Route path="/*" component={NotFound}/>
       </Switch>
