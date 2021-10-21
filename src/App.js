@@ -30,6 +30,8 @@ function App() {
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
         <Route path="/contador" component={Counter}/>
+        
+
 
         <Route path="/*" component={NotFound}/>
       </Switch>
