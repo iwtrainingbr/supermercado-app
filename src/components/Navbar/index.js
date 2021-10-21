@@ -74,7 +74,7 @@ export default function Navbar() {
             <ListItemText>Relatorios</ListItemText>
           </ListItem>
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/QuemSomos">
+          <ListItem button onClick={closeSidebar} component={Link} to="/quem-somos">
             <ListItemIcon><Info/></ListItemIcon>
             <ListItemText>Quem Somos</ListItemText>
           </ListItem>
