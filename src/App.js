@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Counter from "./pages/Counter";
 import Home from "./pages/Home";
+import Register from "./pages/Register"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
         <Route path="/contador" component={Counter}/>
+        <Route path="/cadastro" component={Register}/>
 
         <Route path="/*" component={NotFound}/>
       </Switch>
