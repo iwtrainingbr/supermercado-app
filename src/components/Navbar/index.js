@@ -1,5 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
+import Drawer from "@mui/material/Drawer";
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -11,9 +12,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People} from "@mui/icons-material";
+import {List, Divider, ListItem, ListItemIcon, ListItemText} from '@mui/material';
+import {Link} from "react-router-dom";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [sidebar, setSidebar] = React.useState(false);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -23,8 +28,60 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+  const closeSidebar = () => {
+    setSidebar(false);
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
+      <Drawer
+          anchor={"left"}
+          open={sidebar}
+          onClose={() => setSidebar(false)}
+      >
+
+        <Box sx={{width: 250}}>
+        <List>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/">
+            <ListItemIcon><Home/></ListItemIcon>
+            <ListItemText>Inicio</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/pedidos">
+            <ListItemIcon><ShoppingCart/></ListItemIcon>
+            <ListItemText>Pedidos</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/produtos">
+            <ListItemIcon><Store/></ListItemIcon>
+            <ListItemText>Produtos</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/categorias">
+            <ListItemIcon><Bookmark/></ListItemIcon>
+            <ListItemText>Categorias</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/contatos">
+            <ListItemIcon><People/></ListItemIcon>
+            <ListItemText>Contatos</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/relatorios">
+            <ListItemIcon><Description/></ListItemIcon>
+            <ListItemText>Relatorios</ListItemText>
+          </ListItem>
+
+          <Divider/>
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/login">
+            <ListItemIcon><Logout/></ListItemIcon>
+            <ListItemText>Sair</ListItemText>
+          </ListItem>
+        </List>
+        </Box>
+      </Drawer>
 
       <AppBar position="static">
         <Toolbar>
@@ -33,6 +90,7 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
+            onClick={() => setSidebar(true)}
             sx={{ mr: 2 }}
           >
             <MenuIcon />
