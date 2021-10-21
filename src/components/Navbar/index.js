@@ -73,6 +73,11 @@ export default function Navbar() {
             <ListItemText>Relatorios</ListItemText>
           </ListItem>
 
+          <ListItem button onClick={closeSidebar} component={Link} to="/Inicio">
+            <ListItemIcon><Home/></ListItemIcon>
+            <ListItemText>Inicio</ListItemText>
+          </ListItem>
+
           <Divider/>
 
           <ListItem button onClick={closeSidebar} component={Link} to="/login">

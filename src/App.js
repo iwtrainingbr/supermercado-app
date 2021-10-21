@@ -13,6 +13,7 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Counter from "./pages/Counter";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Navbar/>
 
       <Switch>
+        <Route path="/" component={Home}/>
         <Route path="/login" component={Login}/>
         <Route path="/relatorios" component={Report}/>
         <Route path="/teste" component={Test}/>
