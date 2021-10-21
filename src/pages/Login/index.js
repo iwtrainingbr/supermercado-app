@@ -22,7 +22,7 @@ export default function Login() {
 
       <div align="center">
         <p> Ainda não possui uma conta?
-        <Link to="/cadastro" component={Button}>Cadastre-se!</Link></p>
+        <Button to="/cadastro" component={Link}>Cadastre-se!</Button></p>
       </div>
     </div>
   )
