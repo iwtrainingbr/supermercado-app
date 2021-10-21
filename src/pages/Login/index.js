@@ -1,5 +1,6 @@
 import {Button, TextField, Divider} from "@mui/material";
 import "./styles.scss";
+import {Link} from "react-router-dom";
 
 export default function Login() {
   return (
@@ -17,6 +18,11 @@ export default function Login() {
           Entrar
         </Button>
       </form>
+
+      <div align="center">
+        <p> Ainda não possui uma conta?
+        <Link to="/cadastro" component={Button}>Cadastre-se!</Link></p>
+      </div>
     </div>
   )
 }

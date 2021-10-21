@@ -7,11 +7,19 @@ import Test from "./pages/Test";
 import Config from "./pages/Config";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
-import Contacts from "./pages/Contacts"
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import Category from "./pages/Category";
+import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
+import Counter from "./pages/Counter";
+import Register from "./pages/Register"
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar/>
+
       <Switch>
         <Route path="/login" component={Login}/>
         <Route path="/relatorios" component={Report}/>
@@ -22,7 +30,10 @@ function App() {
         <Route path="/quem-somos" component={About}/>
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
+        <Route path="/contador" component={Counter}/>
+        <Route path="/cadastro" component={Register}/>
 
+        <Route path="/*" component={NotFound}/>
       </Switch>
     </BrowserRouter>
   );
