@@ -12,11 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-<<<<<<< HEAD
-import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People,Info} from "@mui/icons-material";
-=======
-import {ShoppingCart, Store, Home, Bookmark, Logout, Description, Badge, People} from "@mui/icons-material";
->>>>>>> d4a3bcf (teste)
+import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People, Info, Badge} from "@mui/icons-material";
 import {List, Divider, ListItem, ListItemIcon, ListItemText} from '@mui/material';
 import {Link} from "react-router-dom";
 
