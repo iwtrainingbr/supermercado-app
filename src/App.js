@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./pages/Login";
+import Vehicles from "./pages/Vehicles";
 import Report from "./pages/Report";
 import Test from "./pages/Test";
 import Config from "./pages/Config";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/pedidos" component={Orders}/>
         <Route path="/produtos" component={Products}/>
         <Route path="/quem-somos" component={About}/>
+        <Route path="/veiculos" component={Vehicles}/>
         <Route path="/contatos" component={Contacts}/>
         <Route path="/Categorias" component={Category}/>
         <Route path="/contador" component={Counter}/>
