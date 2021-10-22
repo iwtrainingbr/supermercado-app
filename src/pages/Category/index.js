@@ -3,7 +3,7 @@ import { Divider, CardActionArea, Typography, CardMedia, CardContent, Card } fro
 import {API_URL} from "../../Config/";
 import "./styles.scss";
 
-export default function Category() {
+export default function Category(props) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Category() {
         {categories.map(cat => {
           return (
             <Card style={{marginBottom: 20}}>
-               <CardActionArea onClick={() => alert(cat.id)}>
+               <CardActionArea onClick={() => props.history.push("/produtos") }>
                  <CardMedia
                    component="img"
                    height="140"
