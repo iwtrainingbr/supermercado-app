@@ -12,7 +12,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People,Info,DeliveryDining
+
+import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People,Info,DeliveryDining, Badge
 } from "@mui/icons-material";
 import {List, Divider, ListItem, ListItemIcon, ListItemText} from '@mui/material';
 import {Link} from "react-router-dom";
@@ -83,6 +84,12 @@ export default function Navbar() {
           <ListItem button onClick={closeSidebar} component={Link} to="/quem-somos">
             <ListItemIcon><Info/></ListItemIcon>
             <ListItemText>Quem Somos</ListItemText>
+          </ListItem>
+
+
+          <ListItem button onClick={closeSidebar} component={Link} to="/entregadores">
+            <ListItemIcon><Badge/></ListItemIcon>
+            <ListItemText>Entregadores</ListItemText>
           </ListItem>
 
           <Divider/>
