@@ -15,6 +15,8 @@ import Counter from "./pages/Counter";
 import Carrinho from "./pages/Shop";
 import Home from "./pages/Home";
 import Register from "./pages/Register"
+import Deliveryman from "./pages/Deliveryman";
+
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
         <Route path="/contador" component={Counter}/>
         <Route path="/carrinho" component={Carrinho}/>
         <Route path="/cadastro" component={Register}/>
+        <Route path="/entregadores" component={Deliveryman}/>
 
         <Route path="/*" component={NotFound}/>
       </Switch>
