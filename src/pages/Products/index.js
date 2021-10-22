@@ -29,22 +29,22 @@ export default function Products() {
         <Divider/>
       </div>
 
-      {products.map(cat => {
+      {products.map(prod => {
         return (
           <Card style={{marginBottom: 20}}>
-             <CardActionArea onClick={() => alert(cat.id)}>
+             <CardActionArea onClick={() => alert(prod.id)}>
                <CardMedia
                  component="img"
                  height="140"
-                 image={cat.image}
+                 image={prod.image}
                  alt="green iguana"
                />
                <CardContent>
                  <Typography gutterBottom variant="h5" component="div">
-                   {cat.name}
+                   {prod.name}
                  </Typography>
                  <Typography variant="body2" color="text.secondary">
-                   {cat.description}
+                   {prod.description}
                  </Typography>
                </CardContent>
              </CardActionArea>
