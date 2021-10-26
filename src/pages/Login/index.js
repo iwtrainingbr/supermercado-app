@@ -1,9 +1,27 @@
-
 import {Button, TextField, Divider} from "@mui/material";
 import "./styles.scss";
 import {Link} from "react-router-dom";
+import {makeLogin} from "../../security/Authentication";
 
-export default function Login() {
+export default function Login(props) {
+
+  const validLogin = () => {
+    /*
+      let data = {
+        email: 'a@a.com',
+        password: '123456',
+      };
+
+      fetch('api/login', {
+        method: 'POST',
+        body: JSON.stringify(data)
+      })
+    */
+
+    makeLogin();
+    props.setLogged(true);
+  }
+
   return (
     <div className="page-login">
       <form>
@@ -15,7 +33,7 @@ export default function Login() {
 
         <TextField type="password" fullWidth label="Senha"/>
 
-        <Button fullWidth color="primary" size="large" variant="contained">
+        <Button onClick={validLogin} fullWidth color="primary" size="large" variant="contained">
           Entrar
         </Button>
       </form>
