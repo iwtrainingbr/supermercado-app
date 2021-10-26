@@ -17,8 +17,9 @@ import {ShoppingCart, Store, Home, Bookmark, Logout, Description, People,Info,De
 } from "@mui/icons-material";
 import {List, Divider, ListItem, ListItemIcon, ListItemText} from '@mui/material';
 import {Link} from "react-router-dom";
+import {makeLogout} from  "../../security/Authentication";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [sidebar, setSidebar] = React.useState(false);
 
@@ -32,6 +33,15 @@ export default function Navbar() {
 
   const closeSidebar = () => {
     setSidebar(false);
+  }
+
+  const logout = () => {
+    setSidebar(false);
+    setAnchorEl(null);
+
+    makeLogout();
+
+    props.setLogged(null);
   }
 
   return (
@@ -94,7 +104,7 @@ export default function Navbar() {
 
           <Divider/>
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/login">
+          <ListItem button onClick={logout} >
             <ListItemIcon><Logout/></ListItemIcon>
             <ListItemText>Sair</ListItemText>
           </ListItem>
@@ -146,7 +156,7 @@ export default function Navbar() {
               >
                 <MenuItem onClick={handleClose}>Minha Conta</MenuItem>
 
-                <MenuItem onClick={handleClose} component={Link} to="/login">Sair</MenuItem>
+                <MenuItem onClick={logout}>Sair</MenuItem>
               </Menu>
             </div>
 
