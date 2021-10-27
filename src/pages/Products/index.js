@@ -1,6 +1,8 @@
 import {useState, useEffect} from "react";
 import { Divider, CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
 import {API_URL} from "../../Config/";
+import Loading from "../../components/Loading";
+
 import "./styles.scss";
 
 export default function Products() {
@@ -18,9 +20,15 @@ export default function Products() {
         data.push(response[id]);
       }
 
-      setProducts(data);
+      setTimeout(() => {
+        setProducts(data);
+      }, 3000);
     });
   }, []);
+
+  if (products.length === 0) {
+    return (<Loading/>);
+  }
 
   return (
     <section className="page-products">

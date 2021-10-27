@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/Contacts/styles.scss"],"names":[],"mappings":"AAEA,eACE,YAHO,CAKP,6EACE,eANK","file":"10.b8ff9f71.chunk.css","sourcesContent":["$margin: 20px;\n\n.page-contacts {\n  padding: $margin;\n\n  .MuiFormControl-fullWidth, .MuiButton-contained {\n    margin-top: $margin;\n  }\n}\n"]}

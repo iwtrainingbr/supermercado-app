@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Home/index.js"],"names":["Home"],"mappings":"uLAAe,SAASA,IACtB,OACE","file":"static/js/16.6a7b0e5f.chunk.js","sourcesContent":["export default function Home (){\n  return(\n    <h1>Seja Bem Vindo</h1>\n\n\n\n\n  )\n}\n"],"sourceRoot":""}

@@ -1,36 +1,37 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {Switch, Route} from "react-router-dom";
-import Login from "../pages/Login";
-import Vehicles from "../pages/Vehicles";
-import Report from "../pages/Report";
-import Test from "../pages/Test";
-import Config from "../pages/Config";
-import Orders from "../pages/Orders";
-import Products from "../pages/Products";
-import About from "../pages/About";
-import Contacts from "../pages/Contacts";
-import Category from "../pages/Category";
-import NotFound from "../pages/NotFound";
 import Navbar from "../components/Navbar";
-import Counter from "../pages/Counter";
-import Carrinho from "../pages/Shop";
-import Home from "../pages/Home";
-import Register from "../pages/Register"
-import Deliveryman from "../pages/Deliveryman";
+import Loading from "../components/Loading";
+import Login from "../pages/Login";
 import {userLogged} from "../security/Authentication";
 
+const Vehicles = React.lazy(() => import ("../pages/Vehicles"));
+const Report = React.lazy(() => import ("../pages/Report"));
+const Test = React.lazy(() => import ("../pages/Test"));
+const Config = React.lazy(() => import ("../pages/Config"));
+const Orders = React.lazy(() => import ("../pages/Orders"));
+const Products = React.lazy(() => import ("../pages/Products"));
+const About = React.lazy(() => import ("../pages/About"));
+const Contacts = React.lazy(() => import ("../pages/Contacts"));
+const Category = React.lazy(() => import ("../pages/Category"));
+const NotFound = React.lazy(() => import ("../pages/NotFound"));
+const Counter = React.lazy(() => import ("../pages/Counter"));
+const Carrinho = React.lazy(() => import ("../pages/Shop"));
+const Home = React.lazy(() => import ("../pages/Home"));
+const Register = React.lazy(() => import ("../pages/Register"))
+const Deliveryman = React.lazy(() => import ("../pages/Deliveryman"));
 
 export default function Routes() {
   const [logged, setLogged] = useState(userLogged());
 
   if (logged === null) {
     return (
-      <Switch>
-        <Route exact path="/" component={() => Login({setLogged: setLogged})}/>
-        <Route path="/login" component={() => Login({setLogged: setLogged})}/>
-        <Route path="/cadastro" component={Register}/>
-        <Route path="/*" component={NotFound}/>
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={() => Login({setLogged: setLogged})}/>
+          <Route path="/login" component={() => Login({setLogged: setLogged})}/>
+          <Route path="/cadastro" component={Register}/>
+          <Route path="/*" component={NotFound}/>
+        </Switch>
     );
   }
 
