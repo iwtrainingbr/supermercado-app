@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Test/index.js"],"names":["Test"],"mappings":"uLAAe,SAASA,IACtB,OACE","file":"static/js/18.32216a08.chunk.js","sourcesContent":["export default function Test() {\n  return (\n    <p>\n      Teste\n    </p>\n  )\n}\n"],"sourceRoot":""}

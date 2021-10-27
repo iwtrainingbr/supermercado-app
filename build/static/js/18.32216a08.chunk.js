@@ -1,0 +1,2 @@
+(this["webpackJsonpsupermercado-app"]=this["webpackJsonpsupermercado-app"]||[]).push([[18],{212:function(e,p,r){"use strict";r.r(p),r.d(p,"default",(function(){return n}));var t=r(1);function n(){return Object(t.jsx)("p",{children:"Teste"})}}}]);
+//# sourceMappingURL=18.32216a08.chunk.js.map
