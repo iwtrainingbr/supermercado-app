@@ -29,11 +29,11 @@ export default function Login(props) {
 
         <Divider/>
 
-        <TextField fullWidth label="Email"/>
+        <TextField data-cy="email" fullWidth label="Email"/>
 
-        <TextField type="password" fullWidth label="Senha"/>
+        <TextField data-cy="password" type="password" fullWidth label="Senha"/>
 
-        <Button onClick={validLogin} fullWidth color="primary" size="large" variant="contained">
+        <Button data-cy="btn-enter" onClick={validLogin} fullWidth color="primary" size="large" variant="contained">
           Entrar
         </Button>
       </form>

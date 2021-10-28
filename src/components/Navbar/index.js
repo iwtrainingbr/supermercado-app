@@ -97,7 +97,7 @@ export default function Navbar(props) {
           </ListItem>
 
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/entregadores">
+          <ListItem button data-cy="menu-deliverymen" onClick={closeSidebar} component={Link} to="/entregadores">
             <ListItemIcon><Badge/></ListItemIcon>
             <ListItemText>Entregadores</ListItemText>
           </ListItem>
@@ -118,6 +118,7 @@ export default function Navbar(props) {
             size="large"
             edge="start"
             color="inherit"
+            data-cy="menu-sidebar"
             aria-label="menu"
             onClick={() => setSidebar(true)}
             sx={{ mr: 2 }}
