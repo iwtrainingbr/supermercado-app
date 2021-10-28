@@ -61,7 +61,7 @@ export default function Navbar(props) {
             <ListItemText>Inicio</ListItemText>
           </ListItem>
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/pedidos">
+          <ListItem button data-cy="menu-orders" onClick={closeSidebar} component={Link} to="/pedidos">
             <ListItemIcon><ShoppingCart/></ListItemIcon>
             <ListItemText>Pedidos</ListItemText>
           </ListItem>
