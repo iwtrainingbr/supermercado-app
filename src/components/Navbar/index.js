@@ -66,7 +66,7 @@ export default function Navbar(props) {
             <ListItemText>Pedidos</ListItemText>
           </ListItem>
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/produtos">
+          <ListItem button data-cy="menu-products" onClick={closeSidebar} component={Link} to="/produtos">
             <ListItemIcon><Store/></ListItemIcon>
             <ListItemText>Produtos</ListItemText>
           </ListItem>
@@ -120,6 +120,7 @@ export default function Navbar(props) {
             color="inherit"
             data-cy="menu-sidebar"
             aria-label="menu"
+            data-cy="menu-sidebar"
             onClick={() => setSidebar(true)}
             sx={{ mr: 2 }}
           >
