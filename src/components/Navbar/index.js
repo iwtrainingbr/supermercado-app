@@ -71,7 +71,7 @@ export default function Navbar(props) {
             <ListItemText>Produtos</ListItemText>
           </ListItem>
 
-          <ListItem button onClick={closeSidebar} component={Link} to="/categorias">
+          <ListItem data-cy="menu-categories" button onClick={closeSidebar} component={Link} to="/categorias">
             <ListItemIcon><Bookmark/></ListItemIcon>
             <ListItemText>Categorias</ListItemText>
           </ListItem>
